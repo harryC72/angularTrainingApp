@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .shown{
+      visibility: visible;
+  }
+
+  .hidden{
+      visibility: hidden;
+  }
+
+  img{
+      width: 400px;
+  }
+
+  .background{
+      background-color: grey;
+      width: 400px;
+  }
+
+  .grey{
+    filter: grayscale(100%);
+  }
