@@ -10,7 +10,6 @@ import {MaterialModule} from "./material/material.module";
 import { ContactComponent } from './contact/contact.component';
 import { ImageComponent } from './image/image.component';
 import { ImagesComponent } from './images/images.component';
-import { ToggleComponent } from './toggle/toggle.component';
 import {ToggleModule} from "./toggle/toggle.module"
 
 
@@ -22,7 +21,6 @@ import {ToggleModule} from "./toggle/toggle.module"
     ContactComponent,
     ImageComponent,
     ImagesComponent,
-    ToggleComponent,
   ],
   imports: [
     BrowserModule,

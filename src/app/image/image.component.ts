@@ -9,7 +9,7 @@ export class ImageComponent implements OnInit {
 
   @Output() toggled: EventEmitter<boolean> = new EventEmitter();
   @Input() grey: boolean;
-  show = true;
+  @Input() shown = true;
   imageSrc: string;
   
   
@@ -20,8 +20,8 @@ export class ImageComponent implements OnInit {
   }
 
   onClick(){
-    this.show = !this.show;
-    this.toggled.emit(this.show);
+    this.shown = !this.shown;
+    this.toggled.emit(this.shown);
   }
 
 }

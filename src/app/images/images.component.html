@@ -1,2 +1,8 @@
-<image (toggled)="setShown($event)" [grey]></image>
+<image [shown]="shown" (toggled)="setShown($event)" [grey] ></image>
 <div  [className]="shown === false?'hidden': null" (click)="setGrey()"></div>
+<div toggle #firstToggle="toggle" (toggle)="toggleShown()">
+  <toggle-on>On</toggle-on>
+  <toggle-off>Off</toggle-off>
+  <toggle-button></toggle-button>
+  <b [ngClass]="shown? 'fat': 'not-fat'">Hi, Mom!</b>
+</div>

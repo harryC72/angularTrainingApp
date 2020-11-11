@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImagesComponent implements OnInit {
 
-  shown: boolean;
+  shown = false;
   grey = false;
 
   constructor() { }
@@ -17,6 +17,10 @@ export class ImagesComponent implements OnInit {
 
   setShown(value){
     this.shown = value;
+  }
+
+  toggleShown(){
+    this.shown = !this.shown;
   }
 
   setGrey(){

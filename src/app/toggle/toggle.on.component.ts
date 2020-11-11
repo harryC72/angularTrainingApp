@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { ToggleProviderDirective } from './toggle.toggleProvider.directive';
 
 @Component({
   selector: 'toggle-on',
-  template: '<ng-content *ngIf="on"></ng-content>',
+  template: '<ng-content *ngIf="toggleProvider.toggle.checked"></ng-content>',
 })
 export class ToggleOnComponent  {
-  @Input() on: boolean;
+  constructor(public toggleProvider: ToggleProviderDirective){}
 }

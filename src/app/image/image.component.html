@@ -4,9 +4,9 @@
       <mat-card-title>Shiba Inu</mat-card-title>
       <mat-card-subtitle>Dog Breed</mat-card-subtitle>
     </mat-card-header>
-    <div [className]="!show && 'background'">
+    <div [className]="!shown && 'background'">
         <img 
-        [className]="show? 'shown': 'hidden'"
+        [className]="shown? 'shown': 'hidden'"
         [className]="grey && 'grey'"
           mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
            alt="Photo of a Shiba Inu">
@@ -19,6 +19,6 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button  (click)="onClick()">{{show === true ? "Hide": "Show"}}</button>
+      <button  (click)="onClick()">{{shown === true ? "Hide": "Show"}}</button>
     </mat-card-actions>
   </mat-card>

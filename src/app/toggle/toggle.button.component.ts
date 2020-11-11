@@ -1,14 +1,13 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { ToggleProviderDirective } from './toggle.toggleProvider.directive';
 
 @Component({
   selector: 'toggle-button',
-  template: '<mat-slide-toggle [checked]="checked" (click)="onChange()" ></mat-slide-toggle>',
+  template: '<mat-slide-toggle [checked]="toggleProvider.toggle.checked" (click)="onChange()" ></mat-slide-toggle>',
 })
 export class ToggleButtonComponent  {
-  @Input() checked: boolean;
-  @Output() toggle: EventEmitter<boolean> = new EventEmitter();
+  constructor(public toggleProvider: ToggleProviderDirective){}
   onChange(){
-    this.checked = !this.checked;
-    this.toggle.emit(this.checked);
+    this.toggleProvider.toggle.setOnState(!this.toggleProvider.toggle.checked);
   }
 }
